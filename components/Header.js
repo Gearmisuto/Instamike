@@ -12,11 +12,11 @@ import { HomeIcon } from "@heroicons/react/solid";
 import { useSession } from "next-auth/react";
 import {useRouter} from "next/router"
 import { useRecoilState, useRecoilValue } from "recoil";
-import { modalState } from "../atoms/modalAtom";
+import { modalS } from "../atoms/modalAtom";
 
 function Header() {
   const { data: session } = useSession();
-  const [open,setOpen]= useRecoilState(modalState);
+  const [open,setOpen]= useRecoilState(modalS);
   const router = useRouter();
   return (
     <div className="shadow-sm borde-b bg-white sticky top-0 z-50">
